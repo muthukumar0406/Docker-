@@ -1,3 +1,0 @@
-docker build -t node-image .
-docker run node-image
-

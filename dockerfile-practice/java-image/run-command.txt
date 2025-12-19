@@ -1,3 +1,0 @@
-docker build -t java-image .
-docker run java-image
-

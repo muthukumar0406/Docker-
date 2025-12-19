@@ -1,3 +1,0 @@
-docker build -t logging-system
-
-docker volume create namen-volume .

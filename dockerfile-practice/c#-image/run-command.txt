@@ -1,3 +1,0 @@
-docker build -t csharp-image
-docker run csharp-image
-

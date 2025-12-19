@@ -1,0 +1,5 @@
+docker build -t student-record .
+
+docker volume create student_records
+
+docker run -d -p 8082:8000 -v student_records:/data student-record

@@ -1,0 +1,5 @@
+docker build -t python-named .
+
+docker volume create named_volume
+
+docker run -d -p 5000:5000 -v named_volume:/data python_named

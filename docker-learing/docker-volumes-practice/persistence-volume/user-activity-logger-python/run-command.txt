@@ -1,0 +1,5 @@
+docker volume create persistence-volume
+
+docker built -t activity-logger .
+
+docker run -d -p 5002:5000 -v persistence-volume:/data activity-logger

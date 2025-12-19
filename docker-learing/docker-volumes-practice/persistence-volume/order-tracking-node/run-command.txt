@@ -1,0 +1,5 @@
+docker volume create order_volume
+
+docker build -t order-tracking .
+
+docker run -d -p 3002:3000 -v order_volume:/data order-tracking

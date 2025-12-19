@@ -1,0 +1,5 @@
+docker build -t java-named .
+docker volume create java_data
+docker run -d -p 8080:8080 -v java_data:/data java-named
+
+

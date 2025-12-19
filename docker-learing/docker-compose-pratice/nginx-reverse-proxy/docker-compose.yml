@@ -1,0 +1,35 @@
+version: "3.9"
+
+services:
+  frontend:
+    build: ./frontend
+    container_name: frontend-app
+    networks:
+      - app-net
+
+  backend1:
+    build: ./backend1
+    container_name: backend1-app
+    networks:
+      - app-net
+
+  backend2:
+    build: ./backend2
+    container_name: backend2-app
+    networks:
+      - app-net
+
+  nginx:
+    build: ./nginx
+    container_name: nginx-proxy
+    ports:
+      - "8081:80"
+    depends_on:
+      - frontend
+      - backend1
+      - backend2
+    networks:
+      - app-net
+
+networks:
+  app-net:

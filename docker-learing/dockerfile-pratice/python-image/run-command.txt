@@ -1,0 +1,23 @@
+Docker Run & Build Commands
+
+Build Image
+
+Command:
+
+    docker build -t python-image .
+
+Meaning: - Builds an image named python-image from the Dockerfile in the
+current directory.
+
+Run Container
+
+Command:
+
+    docker run python-image
+
+Meaning: - Starts a new container using the python-image.
+
+Summary
+
+-   Build = Create Image
+-   Run = Start Container

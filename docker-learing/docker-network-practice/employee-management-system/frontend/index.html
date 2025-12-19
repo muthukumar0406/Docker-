@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Employees</title>
+</head>
+<body>
+
+<h2>Employee List</h2>
+<ul id="list"></ul>
+
+<script>
+fetch("http://160.187.68.165:3000/employees")
+  .then(res => res.json())
+  .then(data => {
+    const list = document.getElementById("list");
+    data.forEach(emp => {
+      const li = document.createElement("li");
+      li.innerText = emp.name + " - " + emp.role;
+      list.appendChild(li);
+    });
+  });
+</script>
+
+</body>
+</html>

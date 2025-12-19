@@ -1,0 +1,5 @@
+docker build -t node_named .
+
+docker volume create node_logs
+
+docker run -d -9 3000:3000 -v  node_logs:/logs node-named
